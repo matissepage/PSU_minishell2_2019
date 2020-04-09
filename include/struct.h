@@ -7,6 +7,12 @@
 
 #include "minishell.h"
 
+typedef struct node {
+    char *key;
+    char *value;
+    struct node *next;
+}node_t;
+
 typedef struct binary_s {
     char *command;
     struct binary_s *left;

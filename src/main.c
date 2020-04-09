@@ -7,17 +7,12 @@
 
 #include "../include/minishell.h"
 
-int main(int ac, char **av)
+int main(int ac, char **av, char **env)
 {
-    binary_t *binary = NULL;
-    char *str = "ls";
-    char *cedrick = "cat";
-    char *razmo = "razmo";
-    char *rapido = "rapido";
-    binary = add_element(binary, str);
-    binary = add_element(binary, cedrick);
-    binary = add_element(binary, razmo);
-    binary = add_element(binary, rapido);
-    print_bin_tree(binary);
+    my_exec(env);
+    // binary_t *binary = NULL;
+    // char *str = "ls";
+    // binary = add_element(binary, str);
+    // print_bin_tree(binary);
     return (0);
 }

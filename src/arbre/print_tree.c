@@ -14,8 +14,6 @@ void print_bin_tree(binary_t *binary)
         return;
     }
     my_printf("my command is [%s];", binary->command);
-    // if (tree->previous)
-    //     my_printf("my previous command, is [%s];", tree->previous->node->command);
     if (binary->left)
         my_printf("my left, is [%s];", binary->left->command);
     if (binary->right)
