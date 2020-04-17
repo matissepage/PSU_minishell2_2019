@@ -19,6 +19,6 @@ void my_setenv(char *command, node_t *node)
 
 void my_exit(char *command, node_t *node)
 {
-    printf("c'est tout pour moi je me casse\n");
+    // printf("c'est tout pour moi je me casse\n");
     exit (0);
 }
