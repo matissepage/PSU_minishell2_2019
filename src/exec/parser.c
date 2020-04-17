@@ -26,15 +26,23 @@ char **find_path(node_t *node, char *path, char **env)
     char **tab;
     char **test = NULL;
     char *tmp = NULL;
+    int check = 0;
+    check = checker(path, node);
+    if (check == 0)
+        return (NULL);
     char *str = parcour_list(node, env);
     tab = word_array(str, ':');
 
     test = malloc(sizeof(char *) * 2);
     test[1] = NULL;
+    if (access(path, X_OK) == 0) {
+        test[0] = path;
+        return (test);
+    }
     while(tab[i]) {
         str = get_path(tab[i]);
         tmp = my_strcat(tab[i], my_strcat("/", path));
-        if (access(tmp, X_OK) != -1) {
+        if (access(tmp, X_OK) == 0) {
             test[0] = tmp;
             return (test);
         } else

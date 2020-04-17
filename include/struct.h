@@ -13,6 +13,11 @@ typedef struct node {
     struct node *next;
 }node_t;
 
+typedef struct funct_array_s {
+    char *command;
+    void (*fct)(char *, node_t *);
+} funct_array_t;
+
 typedef struct binary_s {
     char *command;
     struct binary_s *left;

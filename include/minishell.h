@@ -49,4 +49,14 @@ void add_element_list(node_t **list, char *key, char *value);
 char *parcour_list(node_t *node, char **env);
 char **find_path(node_t *node, char *path, char **env);
 
+
+/*/////////////////////////////////////////|
+/                    PTRF                  |
+*/////////////////////////////////////////*|
+
+int checker(char *command, node_t *node);
+void my_env(char *command, node_t *node);
+void my_setenv(char *command, node_t *node);
+void my_exit(char *command, node_t *node);
+
 #endif /*MY_MINISHELL_H*/

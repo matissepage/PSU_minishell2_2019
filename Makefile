@@ -13,6 +13,8 @@ SRC		=	src/main.c 						\
 			src/exec/get.c					\
 			src/exec/list.c					\
 			src/exec/parser.c				\
+			src/exec/ptr_to_fct.c			\
+			src/exec/my_fonction.c			\
 
 
 OBJ		= $(SRC:.c=.o)
