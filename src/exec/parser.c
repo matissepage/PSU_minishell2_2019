@@ -10,7 +10,7 @@
 char *parcour_list(node_t *node, char **env)
 {
     char **tab = NULL;
-    node_t *tmp = node;
+    node_t *tmp = NULL;
     tmp = get_env(env);
     while (tmp != NULL) {
         if (my_strcmp(tmp->key, "PATH") == 0) {

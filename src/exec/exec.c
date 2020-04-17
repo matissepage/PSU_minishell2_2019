@@ -26,7 +26,7 @@ char *getpwd(void)
 
 int minishell1(char *buffer, char **env)
 {
-    node_t *node;
+    node_t *node = get_env(env);
     char **execution = find_path(node, buffer, env);
     int status = 0;
     int i = fork();

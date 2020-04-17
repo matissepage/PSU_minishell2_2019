@@ -9,7 +9,7 @@
 
 void my_env(char *command, node_t *node)
 {
-    printf("Recyclons pour prendre soins de l'env\n");
+    print_my_node(node);
 }
 
 void my_setenv(char *command, node_t *node)

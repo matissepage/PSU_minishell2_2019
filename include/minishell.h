@@ -36,7 +36,7 @@ void *add_element(binary_t *binary, char *com);
 void print_bin_tree(binary_t *binary);
 
 /*/////////////////////////////////////////|
-/                    EXEC                  |
+/                  EXEC                    |
 */////////////////////////////////////////*|
 
 char *getpwd(void);
@@ -45,13 +45,18 @@ int my_exec(char **env);
 node_t *get_env(char **env);
 char *get_key(char *str);
 char *get_path(char *str);
-void add_element_list(node_t **list, char *key, char *value);
 char *parcour_list(node_t *node, char **env);
 char **find_path(node_t *node, char *path, char **env);
 
+/*/////////////////////////////////////////|
+/                   LIST                   |
+*/////////////////////////////////////////*|
+
+void add_element_list(node_t **list, char *key, char *value);
+void print_my_node(node_t *node);
 
 /*/////////////////////////////////////////|
-/                    PTRF                  |
+/           POINTEUR SUR FONCTION          |
 */////////////////////////////////////////*|
 
 int checker(char *command, node_t *node);
