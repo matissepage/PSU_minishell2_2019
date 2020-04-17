@@ -14,6 +14,7 @@
 #include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <sys/wait.h>
 
 #define custom_major(devnum)           (((unsigned int)devnum & 0xFF00U) >> 8)
 #define custom_minor(devnum)           ((unsigned int)devnum & 0xFFFF00FFU)

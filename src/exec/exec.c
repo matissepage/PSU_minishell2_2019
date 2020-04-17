@@ -11,13 +11,15 @@ char *getpwd(void)
 {
     char *buffer = NULL;
     size_t size = 100;
+    int my_size = 0;
+    char *tmp = NULL;
 
     if (isatty(0) == 1)
         my_printf("$>");
     if (getline(&buffer, &size, stdin) == -1)
         return (NULL);
-    int my_size = my_strlen(buffer);
-    char *tmp = malloc(sizeof(char) * my_size);
+    my_size = my_strlen(buffer);
+    tmp = malloc(sizeof(char) * my_size);
     for (int i = 0; i < my_size; i += 1)
         tmp[i] = buffer[i];
     tmp[my_size - 1] = '\0';

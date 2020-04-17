@@ -12,6 +12,7 @@ char *parcour_list(node_t *node, char **env)
     char **tab = NULL;
     node_t *tmp = NULL;
     tmp = get_env(env);
+
     while (tmp != NULL) {
         if (my_strcmp(tmp->key, "PATH") == 0) {
             return (tmp->value);
@@ -28,13 +29,11 @@ char **find_path(node_t *node, char *path, char **env)
     char *tmp = NULL;
     int check = 0;
     check = checker(path, node);
-    if (check == 0)
-        return (NULL);
     char *str = parcour_list(node, env);
     tab = word_array(str, ':');
-
     test = malloc(sizeof(char *) * 2);
     test[1] = NULL;
+
     if (access(path, X_OK) == 0) {
         test[0] = path;
         return (test);
